@@ -12,7 +12,7 @@ Building realistic projects to improve my front-end skills.
 
 ### Links
 
-- Live Site URL: [Time tracking dashboard](https://pricing-component-with-t0ggle.netlify.app/)
+- Live Site URL: [Time tracking dashboard](https://t1me-tracking-dashboard.netlify.app/)
 
 ## Built with
 
