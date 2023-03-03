@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Time tracking dashboard</title>
+    <link href="/dist/output.css" rel="stylesheet" />
+    <script src="main.js" defer></script>
+  </head>
+  <body
+    class="min-h-[100vh] my-16 bg-blue-700 text-desaturated-blue grid place-content-center lg:my-0"
+  >
+    <main class="max-w-[1100px] grid gap-5 lg:grid-cols-[1fr_3fr]">
+      <article class="rounded-xl overflow-hidden">
+        <div
+          class="flex gap-5 items-center bg-blue-400 p-7 rounded-b-xl relative z-10 -mb-1.5 lg:flex-col lg:gap-8 lg:items-start lg:pb-20"
+        >
+          <div class="max-w-[60px] border-[3px] border-white rounded-full">
+            <img src="images/image-jeremy.png" alt="" />
+          </div>
+          <div>
+            <p class="text-sm text-pale-blue">Report for</p>
+            <p class="text-white text-2xl font-light lg:text-4xl lg:pr-[2vw]">
+              Jeremy Robson
+            </p>
+          </div>
+        </div>
+        <div
+          class="flex justify-around bg-blue-600 p-4 pt-6 lg:flex-col lg:gap-3 lg:items-start lg:py-7"
+        >
+          <button id="daily" class="transition duration-300 hover:text-white">
+            Daily
+          </button>
+          <button
+            id="weekly"
+            class="text-white transition duration-300 hover:text-white"
+          >
+            Weekly
+          </button>
+          <button id="monthly" class="transition duration-300 hover:text-white">
+            Monthly
+          </button>
+        </div>
+      </article>
+      <article class="grid gap-5 lg:grid-cols-3 lg:gap-7">
+        <section class="rounded-xl overflow-hidden">
+          <div class="bg-work">
+            <img
+              class="max-w-[70px] ml-auto -mt-2.5 mr-4"
+              src="./images/icon-work.svg"
+              alt=""
+            />
+          </div>
+          <div
+            class="bg-blue-600 p-6 rounded-t-xl -mt-7 relative z-10 cursor-pointer transition duration-300 hover:bg-blue-500 lg:h-full"
+          >
+            <div class="flex justify-between items-center mb-2 lg:mb-5">
+              <p class="text-white font-medium">Work</p>
+              <img
+                class="hover:brightness-200"
+                src="./images/icon-ellipsis.svg"
+                alt=""
+              />
+            </div>
+            <div
+              class="flex justify-between items-center lg:flex-col lg:items-start lg:gap-2"
+            >
+              <p class="text-white text-3xl font-light lg:text-5xl">
+                <span class="current">32</span>hrs
+              </p>
+              <p class="text-sm text-pale-blue">
+                Last Week - <span class="previous">36</span>hrs
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="rounded-xl overflow-hidden">
+          <div class="bg-play">
+            <img
+              class="max-w-[70px] ml-auto -mt-1 mr-4"
+              src="./images/icon-play.svg"
+              alt=""
+            />
+          </div>
+          <div
+            class="bg-blue-600 p-6 rounded-t-xl -mt-8 relative z-10 cursor-pointer transition duration-300 hover:bg-blue-500 lg:h-full"
+          >
+            <div class="flex justify-between items-center mb-2 lg:mb-5">
+              <p class="text-white font-medium">Play</p>
+              <img
+                class="hover:brightness-200"
+                src="./images/icon-ellipsis.svg"
+                alt=""
+              />
+            </div>
+            <div
+              class="flex justify-between items-center lg:flex-col lg:items-start lg:gap-2"
+            >
+              <p class="text-white text-3xl font-light lg:text-5xl">
+                <span class="current">10</span>hrs
+              </p>
+              <p class="text-sm text-pale-blue">
+                Last Week - <span class="previous">8</span>hrs
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="rounded-xl overflow-hidden">
+          <div class="bg-study">
+            <img
+              class="ml-auto -mt-2 mr-4"
+              src="./images/icon-study.svg"
+              alt=""
+            />
+          </div>
+          <div
+            class="bg-blue-600 p-6 rounded-t-xl -mt-9 relative z-10 cursor-pointer transition duration-300 hover:bg-blue-500 lg:h-full"
+          >
+            <div class="flex justify-between items-center mb-2 lg:mb-5">
+              <p class="text-white font-medium">Study</p>
+              <img
+                class="hover:brightness-200"
+                src="./images/icon-ellipsis.svg"
+                alt=""
+              />
+            </div>
+            <div
+              class="flex justify-between items-center lg:flex-col lg:items-start lg:gap-2"
+            >
+              <p class="text-white text-3xl font-light lg:text-5xl">
+                <span class="current">4</span>hrs
+              </p>
+              <p class="text-sm text-pale-blue">
+                Last Week - <span class="previous">7</span>hrs
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="rounded-xl overflow-hidden">
+          <div class="bg-exercise">
+            <img class="ml-auto mr-4" src="./images/icon-exercise.svg" alt="" />
+          </div>
+          <div
+            class="bg-blue-600 p-6 rounded-t-xl -mt-4 relative z-10 cursor-pointer transition duration-300 hover:bg-blue-500 lg:h-full"
+          >
+            <div class="flex justify-between items-center mb-2 lg:mb-5">
+              <p class="text-white font-medium">Exercise</p>
+              <img
+                class="hover:brightness-200"
+                src="./images/icon-ellipsis.svg"
+                alt=""
+              />
+            </div>
+            <div
+              class="flex justify-between items-center lg:flex-col lg:items-start lg:gap-2"
+            >
+              <p class="text-white text-3xl font-light lg:text-5xl">
+                <span class="current">4</span>hrs
+              </p>
+              <p class="text-sm text-pale-blue">
+                Last Week - <span class="previous">5</span>hrs
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="rounded-xl overflow-hidden">
+          <div class="bg-social">
+            <img
+              class="ml-auto -mt-4 mr-4"
+              src="./images/icon-social.svg"
+              alt=""
+            />
+          </div>
+          <div
+            class="bg-blue-600 p-6 rounded-t-xl -mt-12 relative z-10 cursor-pointer transition duration-300 hover:bg-blue-500 lg:h-full"
+          >
+            <div class="flex justify-between items-center mb-2 lg:mb-5">
+              <p class="text-white font-medium">Social</p>
+              <img
+                class="hover:brightness-200"
+                src="./images/icon-ellipsis.svg"
+                alt=""
+              />
+            </div>
+            <div
+              class="flex justify-between items-center lg:flex-col lg:items-start lg:gap-2"
+            >
+              <p class="text-white text-3xl font-light lg:text-5xl">
+                <span class="current">5</span>hrs
+              </p>
+              <p class="text-sm text-pale-blue">
+                Last Week - <span class="previous">10</span>hrs
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="rounded-xl overflow-hidden">
+          <div class="bg-selfcare">
+            <img
+              class="max-w-[60px] ml-auto -mt-3 mr-4"
+              src="./images/icon-self-care.svg"
+              alt=""
+            />
+          </div>
+          <div
+            class="bg-blue-600 p-6 rounded-t-xl -mt-4 relative z-10 cursor-pointer transition duration-300 hover:bg-blue-500 lg:h-full"
+          >
+            <div class="flex justify-between items-center mb-2 lg:mb-5">
+              <p class="text-white font-medium">Self Care</p>
+              <img
+                class="hover:brightness-200"
+                src="./images/icon-ellipsis.svg"
+                alt=""
+              />
+            </div>
+            <div
+              class="flex justify-between items-center lg:flex-col lg:items-start lg:gap-2"
+            >
+              <p class="text-white text-3xl font-light lg:text-5xl">
+                <span class="current">2</span>hrs
+              </p>
+              <p class="text-sm text-pale-blue">
+                Last Week - <span class="previous">2</span>hrs
+              </p>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+  </body>
+</html>
